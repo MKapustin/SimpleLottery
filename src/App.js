@@ -1,25 +1,16 @@
-import logo from './logo.svg';
+import React, {Component} from "react"
 import './App.css';
+import Lottery from "./Lottery";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component{
+  render(){
+    return(
+      <div className="App">
+        <Lottery lottery_title="Lotto" lottery_balls_amount={7} lottery_ball_min_possible_value={1} lottery_ball_max_possible_value={9}/>
+        <Lottery lottery_title="Mini Lotto" lottery_balls_amount={4} lottery_ball_min_possible_value={1} lottery_ball_max_possible_value={9}/>
+      </div>
+    );
+  }
 }
 
 export default App;
